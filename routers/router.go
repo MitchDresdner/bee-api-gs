@@ -25,6 +25,12 @@ func init() {
 				&controllers.UserController{},
 			),
 		),
+		// New route for Wine API
+		beego.NSNamespace("/wine",
+			beego.NSInclude(
+				&controllers.WineController{},
+			),
+		),
 	)
 	beego.AddNamespace(ns)
 }
