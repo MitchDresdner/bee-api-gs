@@ -7,7 +7,10 @@ Branches:
 * bee-api-gs - Initial project created with bee CLI
 * wine-db - Integrates WineDb Postgres DB project
 
-Ref:
 
-WineDb Postgres DB project -  [Better practices for Go Database use](https://medium.com/@mjdresdner/better-practices-for-go-database-use-80d0edb1581)
+References:
+
+[Persistent DB with Beego ORM](https://bestow.info/persistent-apis-using-orm-in-go-with-beego/)
+
+[Better practices for Go Database use](https://medium.com/@mjdresdner/better-practices-for-go-database-use-80d0edb1581)
 

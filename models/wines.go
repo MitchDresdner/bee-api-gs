@@ -6,13 +6,14 @@ import (
 	"time"
 )
 
+// Marshal Wine model to ORM
 type Wine struct {
-	Id int    			`orm:"auto"`
-	Product string		`orm:"size(64)"`
-	Description string	`orm:"size(128)"`
-	Price float32		`orm:"null"`
-	CreatedAt  time.Time `orm:"auto_now_add;type(datetime)"`
-	UpdatedAt  time.Time `orm:"auto_now;type(datetime);null"`
+	Id          int       `orm:"auto"`
+	Product     string    `orm:"size(64)"`
+	Description string    `orm:"size(128)"`
+	Price       float32   `orm:"null"`
+	CreatedAt   time.Time `orm:"auto_now_add;type(datetime)"`
+	UpdatedAt   time.Time `orm:"auto_now;type(datetime);null"`
 }
 
 func GetAllWines() ([]*Wine, error) {
@@ -96,7 +97,7 @@ func DeleteWine(id int) (*Wine, error) {
 	// wine := new(Wine)
 	o := orm.NewOrm()
 
-	// read one
+	// Select the object to delete
 	wine := Wine{Id: id}
 	err := o.Read(&wine)
 	if err != nil {

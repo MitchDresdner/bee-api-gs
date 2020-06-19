@@ -17,7 +17,7 @@ func CreateDb() error {
 	// Print log.
 	verbose := true
 
-	// Error.
+	// Beego ORM function to create the table
 	err := orm.RunSyncdb(name, force, verbose)
 	if err != nil {
 		fmt.Println(err)
